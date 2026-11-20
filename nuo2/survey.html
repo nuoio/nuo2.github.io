@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMUNITY CENTER</title>
+   
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: black;
+            font-family: "Arial Rounded MT Bold", "Helvetica", sans-serif;
+        }
+
+        .nav-container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #618D9B;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 50px;
+}
+
+
+.nav-left {
+    display: flex;       
+    align-items: center; 
+    gap: 15px;           
+    font-size: 24px;     
+    font-weight: bold;  
+    color: white;
+}
+
+.logo {
+    width: 100px;        
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.special-link {
+    background-color: #C5D36D; 
+    color: #402010 !important; 
+    padding: 8px 20px;       
+    border-radius: 25px;       
+}
+
+.mobile-top-bar {
+    display: none; 
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 30px;
+    background-color: #FFD550;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+.column{
+display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .mobile-top-bar {
+        display: block; 
+    }
+
+    .top-bar {
+        padding: 10px 20px;
+    }
+
+           .nav-container {
+    position: sticky; 
+    top: 0;
+    display: flex;
+
+       flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #618D9B; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #618D9B;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links a {
+        margin: 0;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .special-link {
+        width: 60%;
+        margin: 10px auto !important;
+    }
+}
+
+        .first {
+            background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('image/bc.png'); 
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fdf8e1;
+        }
+
+        h1 {
+    font-size: 80px;
+    margin: 0;
+    letter-spacing: 5px;
+    margin-right: -5px; 
+    color: black; 
+    text-shadow: 3px 3px 0px #fdf8e1; 
+}
+
+.subtitle {
+    font-size: 24px;
+    margin: 20px auto 0; 
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.4); 
+    border-radius: 25px;
+    color: black;
+    font-weight: bold;
+    max-width: 800px;
+    text-align: center;  
+}
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #618D9B;
+            color: white;
+            border-radius: 25px;
+            margin-top: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #C5D36D;
+            color: #402010;
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .mobile-top-bar {
+                display: block; 
+            }
+
+            .top-bar {
+                padding: 10px 20px;
+            }
+
+            .nav-links {
+                display: none; 
+                flex-direction: column;
+                width: 100%;
+                background-color: #618D9B;
+                padding-bottom: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0;
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .special-link {
+                width: 60%;
+                margin: 10px auto !important;
+            }
+
+            h1 { font-size: 36px; }
+            .subtitle { font-size: 14px; width: 85%; }
+        }
+
+        /* 页脚布局 */
+        .footer {
+            background-color: #223a25;
+            color: #fffae6;
+            padding: 60px 8% 20px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footimg { height: 80px; margin-bottom: 20px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin: 10px 0; }
+        .footer-links a { color: white; text-decoration: none; }
+
+
+
+    .footer {
+        background-color: #223a25;
+        color: #fffae6;
+        padding: 60px 8% 20px;
+        font-family: sans-serif;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px; 
+        margin-bottom: 40px;
+    }
+
+  
+    .column h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #d2dc7b; 
+     justify-content: center;
+    }
+
+.stay{
+    justify-content: left;
+
+}
+  
+    .footlogo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .footimg {
+        height: 100px;         
+        width: auto;           
+        display: block;
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.8;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #fffae6;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+
+    .footer-links a:hover {
+        color: #d2dc7b;
+        padding-left: 5px; 
+    }
+
+   
+    .contact-item {
+        display: flex;
+        align-items: center;
+        justify-items:left;
+        gap: 10px;
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-form input {
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        background: rgba(255, 255, 255, 0.9);
+        outline: none; 
+    }
+
+    .mini-submit {
+        background-color: #d2dc7b;
+        color: #795548;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .mini-submit:hover {
+        background-color: #fffae6;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        font-size: 12px;
+        opacity: 0.6;
+    }
+
+   
+    @media screen and (max-width: 768px) {
+        .footer {
+            padding: 40px 5% 20px; 
+        }
+        
+        .grid {
+            grid-template-columns: 1fr; 
+            gap: 30px; 
+            text-align: center; 
+        }
+
+        .footlogo {
+            justify-content: center; 
+            margin-right: 0; 
+        }
+
+        .contact-item {
+            justify-content: center; 
+        }
+
+        .footer-links a:hover {
+            padding-left: 0;
+            transform: scale(1.05);
+            display: inline-block;
+        }
+
+}
+      
+      @keyframes show {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .survey-section {
+   
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+             animation: show 5s ease-in forwards;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+   
+            width: 100%;
+            border: 4px dashed #7294c3; 
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #7294c3; 
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .profile-preview {
+            margin-bottom: 32px;
+            padding: 24px;
+            border: 2px solid #dce8c8;
+            border-left: 8px solid #C5D36D;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #f0f5e5, #f9fbf4);
+            color: #402010;
+        }
+
+        .profile-preview-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .profile-preview-label {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background-color: #C5D36D;
+            color: #402010;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .profile-preview h3 {
+            margin: 0 0 18px;
+            color: #618D9B;
+            font-size: 24px;
+        }
+
+        .profile-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .profile-preview-item {
+            padding: 14px 16px;
+            border-radius: 14px;
+            background-color: white;
+        }
+
+        .profile-preview-item span {
+            display: block;
+            margin-bottom: 5px;
+            color: #795548;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .profile-preview-item strong {
+            color: #402010;
+            overflow-wrap: anywhere;
+        }
+
+        .profile-preview-note {
+            margin: 16px 0 0;
+            color: #795548;
+            font-size: 13px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .form-group label,
+        .form-group .form-label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #795548; 
+            font-size: 15px;
+        }
+
+        .form-group input:not([type="radio"]):not([type="checkbox"]):not([type="range"]):not([type="file"]),
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 2px solid #e0e5d5;
+            border-radius: 15px;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #C5D36D; 
+            box-shadow: 0 0 8px rgba(197, 211, 109, 0.4);
+        }
+
+        .choice-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            color: #795548;
+            font-size: 14px;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .btn-submit, .btn-reset {
+            padding: 12px 35px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-submit {
+            background-color: #618D9B;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #C5D36D;
+            color: #402010;
+            transform: scale(1.05);
+        }
+
+        .btn-reset {
+            background-color: #e0e5d5;
+            color: #795548;
+        }
+
+        .btn-reset:hover {
+            background-color: #d2dc7b;
+            transform: scale(1.05);
+        }
+
+       
+        @media screen and (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .form-container {
+                padding: 25px 20px;
+                border-radius: 20px;
+            }
+            .form-container h2 {
+                font-size: 24px;
+            }
+            .profile-preview {
+                padding: 18px 14px;
+            }
+            .profile-preview-grid {
+                grid-template-columns: 1fr;
+            }
+            .profile-preview h3 {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+<nav class="nav-container">
+    <div class="top-bar">
+        <div class="nav-left">
+            <img src="image/amlogo.png" alt="logo" class="logo"> 
+            <span>COMMUNITY</span>
+        </div>
+
+        <button class="theme-toggle" type="button" hidden>Night mode</button>
+
+        <!-- 这里加上了 aria-expanded="false" -->
+        <button class="mobile-top-bar" id="burger-btn" type="button"
+                aria-label="Main menu" aria-controls="nav-list" aria-expanded="false">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+        </button>
+    </div>
+
+       <div class="nav-links" id="nav-list">
+        <a href="index.html">Home</a>
+        <a href="actd.html">Activities</a>
+        <a href="ani.html">Neighbors</a>
+        <a href="photo.html">Photos</a>
+        <a href="survey.html" class="special-link" >Join Us</a>
+    </div>
+</nav>
+
+<header class="first">
+    <div class="hero-content">
+        <h1>COMMUNITY CENTER</h1> 
+        <p class="subtitle">Welcome home. Step into our cozy island community where every villager is a lifelong friend.</p> 
+               <a href="mapd.html" class="btn">Explore Island</a> 
+    </div>
+</header>
+
+
+<section class="survey-section">
+    <div class="form-container">
+        <h2>Visitor Profile Survey</h2>
+        <section class="profile-preview" aria-labelledby="profile-greeting">
+            <div class="profile-preview-top">
+                <span class="profile-preview-label" id="profile-label">SAMPLE PREVIEW</span>
+                <span>Island Resident Card</span>
+            </div>
+            <h3 id="profile-greeting">Welcome to the island, fu yunjia!</h3>
+            <div class="profile-preview-grid">
+                <div class="profile-preview-item">
+                    <span>Name</span>
+                    <strong id="profile-name">fu yunjia</strong>
+                </div>
+                <div class="profile-preview-item">
+                    <span>Island ID</span>
+                    <strong id="profile-island-id">2557020304</strong>
+                </div>
+                <div class="profile-preview-item">
+                    <span>Email</span>
+                    <strong id="profile-email">fyjjia@163.com</strong>
+                </div>
+                <div class="profile-preview-item">
+                    <span>Birthday</span>
+                    <strong id="profile-birthday">December 25, 2019</strong>
+                </div>
+                <div class="profile-preview-item">
+                    <span>Phone number</span>
+                    <strong id="profile-phone">+86 189 4711 1222</strong>
+                </div>
+                <div class="profile-preview-item">
+                    <span>Gender</span>
+                    <strong id="profile-gender">Female</strong>
+                </div>
+                <div class="profile-preview-item">
+                    <span>Favorite part</span>
+                    <strong id="profile-favorite-part">Neighbors</strong>
+                </div>
+                <div class="profile-preview-item">
+                    <span>Year of Play</span>
+                    <strong id="profile-years">3</strong>
+                </div>
+            </div>
+            <p class="profile-preview-note" id="profile-note">This sample shows the kind of profile you will see after submitting the survey.</p>
+        </section>
+
+ <form action="#" method="POST" id="joinForm">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" placeholder="Enter your name" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="island-id">Island ID</label>
+                    <input id="island-id" type="password" placeholder="ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-address">Email Address</label>
+                    <input id="email-address" type="email" placeholder="example@gmail.com">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input id="date-of-birth" type="date">
+                </div>
+                <div class="form-group">
+                    <label for="time-of-birth">Time of Birth</label>
+                    <input id="time-of-birth" type="time">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input id="phone-number" type="tel" placeholder="+1 234 567 890">
+                </div>
+                <div class="form-group">
+                    <span id="gender-label" class="form-label">Gender</span>
+                    <div class="choice-group" role="group" aria-labelledby="gender-label"
+                         style="padding-top: 10px;">
+                        <label><input type="radio" name="Gender"> Male</label>
+                        <label><input type="radio" name="Gender"> Female</label>
+                        <label><input type="radio" name="Gender"> Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <span id="liked-parts-label" class="form-label">Which parts do you like?</span>
+                <div class="choice-group" role="group" aria-labelledby="liked-parts-label">
+                    <label><input type="checkbox" name="likedParts" value="Activities"> Activities</label>
+                    <label><input type="checkbox" name="likedParts" value="Neighbors"> Neighbors</label>
+                    <label><input type="checkbox" name="likedParts" value="Photos"> Photos</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="degree-of-fondness">Degree of fondness</label>
+                    <input id="degree-of-fondness" type="range" min="1" max="10">
+                </div>
+                <div class="form-group">
+                    <label for="favorite-part">Your favorite part</label>
+                    <select id="favorite-part" name="favoritePart" required>
+                        <option value="" disabled selected>Check at least one part above first</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="year-of-play">Year of Play</label>
+                    <input id="year-of-play" type="number" min="1" max="50">
+                </div>
+                <div class="form-group">
+                    <label for="visitor-photo">Upload your Photo</label>
+                    <input id="visitor-photo" type="file" accept="image/*">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-information">Additional Information</label>
+                <textarea id="additional-information" rows="4" placeholder="Tell us more about yourself..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <input type="reset" class="btn-reset" value="Clear Form">
+                <!-- 注意这里：type 已经改成了 submit -->
+                <input type="submit" class="btn-submit" value="Submit Form">
+            </div>
+
+        </form>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="site-footer-content">
+        <a class="site-footer-brand" href="index.html">
+            <img src="image/amlogo.png" alt="" width="300" height="202">
+            <span>Community Center</span>
+        </a>
+
+        <nav aria-label="Footer navigation">
+            <h2>Quick Links</h2>
+            <ul class="site-footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="actd.html">Activities</a></li>
+                <li><a href="ani.html">Neighbors</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="survey.html">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="site-footer-contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Fionanmj@island.com</li>
+                <li>+86 189 **** ****</li>
+            </ul>
+        </div>
+    </div>
+    <div class="site-footer-bottom">&copy; Fiona</div>
+</footer>
+
+
+<script>
+    const burgerBtn = document.getElementById('burger-btn');
+    const navList = document.getElementById('nav-list');
+    
+    if (burgerBtn) {
+        burgerBtn.onclick = function() {
+            navList.classList.toggle('active');
+            const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+            burgerBtn.setAttribute('aria-expanded', !isExpanded);
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        navLinks.forEach(link => {
+            const linkPage = new URL(link.href).pathname.split('/').pop();
+            if (linkPage === currentPage) {
+                link.style.color = '#C5D36D'; 
+                if (!link.classList.contains('special-link')) {
+                    link.style.borderBottom = '2px solid #C5D36D';
+                }
+            }
+        });
+    });
+
+    // 表单验证逻辑
+    const joinForm = document.getElementById('joinForm');
+    const likedParts = Array.from(joinForm.elements.namedItem('likedParts'));
+    const favoritePart = joinForm.elements.namedItem('favoritePart');
+
+    function updateFavoriteParts() {
+        const previousFavorite = favoritePart.value;
+        const checkedParts = likedParts.filter(part => part.checked);
+        const prompt = checkedParts.length ? 'Choose your favorite part' : 'Check at least one part above first';
+        const placeholder = new Option(prompt, '', true, true);
+        placeholder.disabled = true;
+        favoritePart.replaceChildren(placeholder);
+
+        for (const part of checkedParts) {
+            favoritePart.add(new Option(part.value, part.value));
+        }
+
+        if (checkedParts.some(part => part.value === previousFavorite)) {
+            favoritePart.value = previousFavorite;
+        }
+    }
+
+    for (const part of likedParts) {
+        part.addEventListener('change', updateFavoriteParts);
+    }
+    joinForm.addEventListener('reset', function() {
+        window.setTimeout(updateFavoriteParts, 0);
+    });
+    window.addEventListener('pageshow', updateFavoriteParts);
+    updateFavoriteParts();
+
+    function renderProfile(visitorProfile) {
+        document.getElementById('profile-label').textContent = visitorProfile.isSample
+            ? 'SAMPLE PREVIEW'
+            : 'YOUR PROFILE';
+        document.getElementById('profile-greeting').textContent = visitorProfile.getGreeting();
+        document.getElementById('profile-name').textContent = `${visitorProfile.firstName} ${visitorProfile.lastName}`;
+        const islandId = visitorProfile.islandId;
+        let displayedIslandId = islandId || 'Not provided';
+        if (islandId && !visitorProfile.isSample) {
+            displayedIslandId = `${'•'.repeat(Math.max(islandId.length - 2, 0))}${islandId.slice(-2)}`;
+        }
+        document.getElementById('profile-island-id').textContent = displayedIslandId;
+        document.getElementById('profile-email').textContent = visitorProfile.email || 'Not provided';
+        document.getElementById('profile-birthday').textContent = visitorProfile.birthday || 'Not provided';
+        document.getElementById('profile-phone').textContent = visitorProfile.phone || 'Not provided';
+        document.getElementById('profile-gender').textContent = visitorProfile.gender || 'Not provided';
+        document.getElementById('profile-favorite-part').textContent = visitorProfile.favoritePart;
+        document.getElementById('profile-years').textContent = visitorProfile.yearsOnIsland || 'Not specified';
+        document.getElementById('profile-note').textContent = visitorProfile.isSample
+            ? 'This sample shows the kind of profile you will see after submitting the survey.'
+            : 'Your profile was created from the answers you submitted.';
+    }
+
+    const sampleProfile = {
+        firstName: 'fu',
+        lastName: 'yunjia',
+        islandId: '2557020304',
+        email: 'fyjjia@163.com',
+        birthday: 'December 25, 2019',
+        phone: '+86 189 4711 1222',
+        gender: 'Female',
+        favoritePart: 'Neighbors',
+        yearsOnIsland: 3,
+        isSample: true,
+        getGreeting: function() {
+            return `Welcome to the island, ${this.firstName} ${this.lastName}!`;
+        }
+    };
+
+    renderProfile(sampleProfile);
+
+    if (joinForm) {
+        joinForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // 阻止默认提交
+            
+            // 获取输入框
+            const firstName = joinForm.querySelector('input[placeholder="Enter your name"]');
+            const lastName = joinForm.querySelector('input[placeholder="Enter last name"]');
+            const email = joinForm.querySelector('input[type="email"]');
+            const password = joinForm.querySelector('input[type="password"]');
+            const birthday = joinForm.querySelector('input[type="date"]');
+            const phone = joinForm.querySelector('input[type="tel"]');
+            const selectedGender = joinForm.querySelector('input[name="Gender"]:checked');
+            
+            let isValid = true;
+            let errorMessage = "";
+
+            // 正则验证
+            if (firstName.value.trim().length < 2) {
+                errorMessage += "- First Name must be at least 2 characters.\n";
+                isValid = false;
+            }
+            if (lastName.value.trim().length < 2) {
+                errorMessage += "- Last Name must be at least 2 characters.\n";
+                isValid = false;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+                errorMessage += "- Please enter a valid email address.\n";
+                isValid = false;
+            }
+            if (password.value.length < 6) {
+                errorMessage += "- Island ID (Password) must be at least 6 characters.\n";
+                isValid = false;
+            }
+
+            // 显示结果
+            if (isValid) {
+                const visitorProfile = {
+                    firstName: firstName.value.trim(),
+                    lastName: lastName.value.trim(),
+                    islandId: password.value,
+                    email: email.value.trim(),
+                    birthday: birthday.value,
+                    phone: phone.value.trim(),
+                    gender: selectedGender ? selectedGender.parentElement.textContent.trim() : '',
+                    favoritePart: favoritePart.value,
+                    yearsOnIsland: joinForm.querySelector('input[type="number"]').value,
+                    isSample: false,
+                    getGreeting: function() {
+                        return `Welcome to the island, ${this.firstName}!`;
+                    }
+                };
+
+                renderProfile(visitorProfile);
+                alert("Registration Successful! Welcome to the island community!");
+                joinForm.reset();
+            } else {
+                alert("Please correct the following errors:\n" + errorMessage);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

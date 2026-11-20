@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMUNITY CENTER</title>
+   
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: black;
+            font-family: "Arial Rounded MT Bold", "Helvetica", sans-serif;
+        }
+
+        .nav-container {
+    position: sticky; 
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #618D9B; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+
+.top-bar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 50px;
+}
+
+
+.nav-left {
+    display: flex;       
+    align-items: center; 
+    gap: 15px;           
+    font-size: 24px;     
+    font-weight: bold;  
+    color: white;
+}
+
+.logo {
+    width: 100px;        
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.special-link {
+    background-color: #C5D36D;
+    color: #402010 !important; 
+    padding: 8px 20px;       
+    border-radius: 25px;       
+}
+
+.mobile-top-bar {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 30px;
+    background-color: #FFD550; 
+    margin: 5px 0;
+    border-radius: 2px;
+}
+.column{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-top-bar {
+        display: block;
+    }
+
+    .top-bar {
+        padding: 10px 20px;
+    }
+
+           .nav-container {
+    position: sticky;
+    top: 0;
+    display: flex;
+
+       flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #618D9B; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #618D9B;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links a {
+        margin: 0;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .special-link {
+        width: 60%;
+        margin: 10px auto !important;
+    }
+}
+
+        .first {
+            background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('image/bc.png'); 
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fdf8e1;
+        }
+
+        h1 {
+    font-size: 80px;
+    margin: 0;
+    letter-spacing: 5px;
+    margin-right: -5px; 
+    color: black; 
+    text-shadow: 3px 3px 0px #fdf8e1; 
+}
+
+.subtitle {
+    font-size: 24px;
+    margin: 20px auto 0; 
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.4); 
+    border-radius: 25px;
+    color: black;
+    font-weight: bold;
+    max-width: 800px;
+    text-align: center; 
+}
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #618D9B;
+            color: white;
+            border-radius: 25px;
+            margin-top: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #C5D36D;
+            color: #402010;
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .mobile-top-bar {
+                display: block; 
+            }
+
+            .top-bar {
+                padding: 10px 20px;
+            }
+
+            .nav-links {
+                display: none; 
+                flex-direction: column;
+                width: 100%;
+                background-color: #618D9B;
+                padding-bottom: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 0;
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .special-link {
+                width: 60%;
+                margin: 10px auto !important;
+            }
+
+            h1 { font-size: 36px; }
+            .subtitle { font-size: 14px; width: 85%; }
+        }
+
+        .footer {
+            background-color: #223a25;
+            color: #fffae6;
+            padding: 60px 8% 20px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footimg { height: 80px; margin-bottom: 20px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin: 10px 0; }
+        .footer-links a { color: white; text-decoration: none; }
+
+
+
+    .footer {
+        background-color: #223a25;
+        color: #fffae6;
+        padding: 60px 8% 20px;
+        font-family: sans-serif;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px; 
+        margin-bottom: 40px;
+    }
+
+  
+    .column h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #d2dc7b; 
+     justify-content: center;
+    }
+
+.stay{
+    justify-content: left;
+
+}
+  
+    .footlogo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    .footimg {
+        height: 100px;         
+        width: auto;           
+        display: block;
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.8;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #fffae6;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+
+    .footer-links a:hover {
+        color: #d2dc7b;
+        padding-left: 5px; 
+    }
+
+   
+    .contact-item {
+        display: flex;
+        align-items: center;
+        justify-items:left;
+        gap: 10px;
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-form input {
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        background: rgba(255, 255, 255, 0.9);
+        outline: none; 
+    }
+
+    .mini-submit {
+        background-color: #d2dc7b;
+        color: #795548;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .mini-submit:hover {
+        background-color: #fffae6;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        font-size: 12px;
+        opacity: 0.6;
+    }
+
+   
+    @media screen and (max-width: 768px) {
+        .footer {
+            padding: 40px 5% 20px; 
+        }
+        
+        .grid {
+            grid-template-columns: 1fr; 
+            gap: 30px; 
+            text-align: center; 
+        }
+
+        .footlogo {
+            justify-content: center; 
+            margin-right: 0; 
+        }
+
+        .contact-item {
+            justify-content: center; 
+        }
+
+        .footer-links a:hover {
+            padding-left: 0;
+            transform: scale(1.05);
+            display: inline-block;
+        }
+
+}
+
+
+/*activitycss*/
+
+
+        .activities-section {
+            
+            margin: 0 auto 60px auto; 
+           
+            padding: 40px;
+            border-radius: 40px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .activities-section h2 {
+            padding: 12px 25px;
+            text-align: left;
+            border-left: 8px solid #acd0df; 
+            font-size: 36px;
+            color: #7294c3; 
+            margin-top: 0;
+            margin-bottom: 40px;
+            background-color: #f0f5e5; 
+            display: inline-block;
+            border-radius: 0 20px 20px 0;
+        }
+
+        .month-filter {
+            display: flex;
+            align-items: end;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #f0f5e5;
+        }
+
+        .filter-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            color: #402010;
+            font-weight: bold;
+        }
+
+        .filter-field select {
+            min-width: 240px;
+            padding: 12px 16px;
+            border: 2px solid #acd0df;
+            border-radius: 16px;
+            background-color: white;
+            font: inherit;
+        }
+
+        .month-filter .btn {
+            margin-top: 0;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .filter-status {
+            flex-basis: 100%;
+            margin: 0;
+            color: #795548;
+            font-weight: bold;
+        }
+
+
+        .grid-table {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 0;
+        }
+
+        .activity-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+            align-items: start;
+            gap: 24px;
+        }
+
+        .rsvp-card,
+        .rsvp-dialog {
+            padding: 22px;
+            border: 2px solid #C5D36D;
+            border-radius: 20px;
+            background: #f0f5e5;
+            color: #402010;
+            line-height: 1.5;
+        }
+
+        .rsvp-card {
+            position: sticky;
+            top: 100px;
+            overflow-wrap: anywhere;
+        }
+
+        .rsvp-list {
+            display: grid;
+            gap: 12px;
+            max-height: min(58vh, 36rem);
+            overflow-y: auto;
+            list-style: none;
+        }
+
+        .rsvp-entry {
+            padding: 12px;
+            border: 2px solid #618D9B;
+            border-radius: 12px;
+            background: #fffaf0;
+            scroll-margin: 8px;
+        }
+
+        .rsvp-example {
+            margin-top: 12px;
+        }
+
+        .rsvp-example-label {
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        .rsvp-entry:focus-visible {
+            outline: 2px solid #618D9B;
+            outline-offset: -2px;
+        }
+
+        .night-mode .rsvp-entry {
+            background: var(--night-panel);
+            border-color: var(--night-border);
+        }
+
+        .rsvp-card h3,
+        .rsvp-dialog h3 {
+            margin: 0 0 12px;
+            font-size: 22px;
+        }
+
+        .rsvp-card dl {
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            gap: 7px 14px;
+            margin-top: 12px;
+        }
+
+        .rsvp-card dt {
+            font-weight: bold;
+        }
+
+        .rsvp-card dd {
+            margin: 0;
+        }
+
+        .grid-row[data-venue] {
+            cursor: pointer;
+        }
+
+        .rsvp-button {
+            padding: 9px 14px;
+            border: 1px solid #618D9B;
+            border-radius: 14px;
+            background: #fffaf0;
+            color: #314e58;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .rsvp-button:hover {
+            background: #e7edcb;
+        }
+
+        .activity-join {
+            display: block;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .rsvp-remove {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .rsvp-dialog {
+            width: min(460px, calc(100% - 24px));
+            max-height: calc(100% - 24px);
+            margin: auto;
+            overflow: auto;
+        }
+
+        .rsvp-dialog::backdrop {
+            background: rgba(13, 21, 30, 0.68);
+        }
+
+        .rsvp-dialog label {
+            display: block;
+            margin: 12px 0 4px;
+            font-weight: bold;
+        }
+
+        .rsvp-dialog input {
+            width: 100%;
+            padding: 9px 12px;
+            border: 1px solid #618D9B;
+            border-radius: 10px;
+            background: white;
+            color: inherit;
+            font: inherit;
+        }
+
+        .rsvp-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .night-mode :is(.rsvp-card, .rsvp-dialog, .rsvp-button) {
+            color: var(--night-text);
+            background: var(--night-surface);
+            border-color: var(--night-border);
+        }
+
+        .night-mode .rsvp-button:hover {
+            background: var(--night-panel);
+        }
+
+        
+        .grid-header {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.4fr) minmax(0, 1.2fr);
+            gap: 14px;
+            background-color: #acd0df; 
+            color: white; 
+            font-size: clamp(15px, 1.6vw, 24px);
+            padding: 18px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: bold;
+                        animation: show 1.5s ease-in forwards;
+        }
+
+ @keyframes show {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+      
+        .grid-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, .8fr) minmax(0, 2.4fr) minmax(0, 1.2fr);
+            gap: 14px;
+            background-color: white;
+            padding: 18px;
+            border-radius: 25px;
+            align-items: center; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 2px solid transparent;
+            opacity: 0;
+            animation: show 0.5s ease-in forwards;
+        }
+
+    
+        .grid-row:hover {
+            transform: translateY(-6px) scale(1.01);
+            border-color: #acd0df;
+            box-shadow: 0 15px 30px rgba(172, 208, 223, 0.3);
+            background-color: #fafdff;
+        }
+
+        .grid-row[hidden] {
+            display: none;
+        }
+
+       
+
+        .col-img {
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .col-img img {
+            width: 100%;
+            height: 140px;
+            border-radius: 15px;
+            transition: transform 0.4s ease;
+        }
+
+          .grid-row:hover .col-img img {
+            transform: scale(1.1); 
+        }
+
+        .col-host {
+            font-size: clamp(16px, 1.6vw, 22px);
+            font-weight: bold;
+            color: #7294c3;
+            text-align: center;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .col-date {
+            font-size: 18px;
+            color: #795548;
+            line-height: 1.8;
+        }
+
+        .col-date strong {
+            display: block;
+            color: #7294c3;
+            font-size: 20px;
+        }
+
+        .col-time {
+            font-size: 16px;
+            font-weight: bold;
+            color: #425b33;
+            line-height: 1.6;
+            background-color: #ddebd8; 
+            padding: 10px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+
+@media (max-width: 960px) {
+    .activity-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .rsvp-card {
+        grid-row: 1;
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+   
+    .activities-section {
+        padding: 20px;
+        margin: 0 15px 30px 15px;
+        border-radius: 20px;
+    }
+
+   
+    .activities-section h2 {
+        font-size: 24px;
+        padding: 10px 15px;
+        margin-bottom: 25px;
+    }
+
+    .month-filter {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-field select,
+    .month-filter .btn {
+        width: 100%;
+    }
+
+
+    .grid-header {
+        display: none;
+    }
+
+    
+    .grid-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    /* 调整图片自适应 */
+    .col-img img {
+        height: auto;
+        max-height: 200px;
+        object-fit: cover; 
+    }
+
+
+    .col-host {
+        font-size: 20px;
+    }
+
+    .col-date {
+        font-size: 16px;
+    }
+
+    .col-time {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+      
+
+    </style>
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+<nav class="nav-container">
+    <div class="top-bar">
+        <div class="nav-left">
+            <img src="image/amlogo.png" alt="logo" class="logo"> 
+            <span>COMMUNITY</span>
+        </div>
+
+        <button class="theme-toggle" type="button" hidden>Night mode</button>
+
+        <button class="mobile-top-bar" id="burger-btn" type="button"
+                aria-label="Main menu" aria-controls="nav-list" aria-expanded="false">
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+        </button>
+    </div>
+
+
+    <div class="nav-links" id="nav-list">
+        <a href="index.html">Home</a>
+        <a href="actd.html">Activities</a>
+        <a href="ani.html">Neighbors</a>
+        <a href="photo.html">Photos</a>
+        <a href="survey.html" class="special-link" >Join Us</a>
+    </div>
+</nav>
+
+<header class="first">
+    <div class="hero-content">
+        <h1>COMMUNITY CENTER</h1> 
+        <p class="subtitle">Welcome home. Step into our cozy island community where every villager is a lifelong friend.</p> 
+   <a href="mapd.html" class="btn">Explore Island</a>     </div>
+</header>
+
+
+  <section class="activities-section">
+        <h2>Community Activities</h2>
+
+        <form class="month-filter" id="month-filter">
+            <div class="filter-field">
+                <label for="month-select">Which month are you free?</label>
+                <select id="month-select" name="month">
+                    <option value="all">Show all months</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <div class="filter-field">
+                <label for="time-select">What time of day suits you?</label>
+                <select id="time-select" name="time">
+                    <option value="all">Any time</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+            </div>
+            <button class="btn" type="submit">Find activities</button>
+            <p class="filter-status" id="filter-status" aria-live="polite">All activities are shown. Choose a month to filter them.</p>
+        </form>
+
+        <div class="activity-layout">
+        <div class="grid-table" id="activity-list">
+            <div class="grid-header">
+                <div>Image</div>
+                <div>Month</div>
+                <div>Community Activity</div>
+                <div>Host &amp; Time</div>
+            </div>
+
+            <div class="grid-row" data-month="1" data-period="evening" data-venue="Community Center">
+                <div class="col-img"><img src="image/island.png" alt="Island celebration"></div>
+                <div class="col-host">January</div>
+                <div class="col-date"><strong>New Year Island Gathering</strong>Welcome the year with music, snacks, and wishes for the island.</div>
+                <div class="col-time">Isabelle<br><span class="activity-time">5 PM–7 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="2" data-period="morning" data-venue="North Pier">
+                <div class="col-img"><img src="image/fishing.png" alt="Fishing meetup"></div>
+                <div class="col-host">February</div>
+                <div class="col-date"><strong>Winter Fishing Meetup</strong>Share fishing tips and warm drinks by the shore.</div>
+                <div class="col-time">C.J.<br><span class="activity-time">9 AM–12 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="3" data-period="morning" data-venue="Spring Trail">
+                <div class="col-img"><img src="image/island.png" alt="Spring flower walk"></div>
+                <div class="col-host">March</div>
+                <div class="col-date"><strong>Spring Flower Walk</strong>Explore the island paths and take photos of spring blooms.</div>
+                <div class="col-time">Leif<br><span class="activity-time">10 AM–12 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="4" data-period="morning" data-venue="Cherry Blossom Grove">
+                <div class="col-img"><img src="image/island.png" alt="Cherry blossom picnic"></div>
+                <div class="col-host">April</div>
+                <div class="col-date"><strong>Cherry Blossom Picnic</strong>Bring a picnic and enjoy an afternoon under the blossoms.</div>
+                <div class="col-time">Isabelle<br><span class="activity-time">11 AM–1 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="5" data-period="morning" data-venue="Community Garden">
+                <div class="col-img"><img src="image/island.png" alt="Community garden"></div>
+                <div class="col-host">May</div>
+                <div class="col-date"><strong>Island Gardening Day</strong>Plant flowers and brighten the paths around the community center.</div>
+                <div class="col-time">Leif<br><span class="activity-time">9 AM–11 AM</span></div>
+            </div>
+            <div class="grid-row" data-month="6" data-period="afternoon" data-venue="South Pier">
+                <div class="col-img"><img src="image/fishing.png" alt="Summer fishing challenge"></div>
+                <div class="col-host">June</div>
+                <div class="col-date"><strong>Summer Fishing Challenge</strong>Team up for a friendly fishing challenge along the coast.</div>
+                <div class="col-time">C.J.<br><span class="activity-time">2 PM–5 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="7" data-period="evening" data-venue="Island Plaza">
+                <div class="col-img"><img src="image/island.png" alt="Fireworks picnic"></div>
+                <div class="col-host">July</div>
+                <div class="col-date"><strong>Fireworks Picnic Night</strong>Share snacks and watch fireworks with your neighbors.</div>
+                <div class="col-time">Isabelle<br><span class="activity-time">7 PM–9 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="8" data-period="morning" data-venue="South Beach">
+                <div class="col-img"><img src="image/island.png" alt="Island beach cleanup"></div>
+                <div class="col-host">August</div>
+                <div class="col-date"><strong>Island Beach Cleanup</strong>Help tidy the beach, then relax together by the water.</div>
+                <div class="col-time">Community Team<br><span class="activity-time">9 AM–11 AM</span></div>
+            </div>
+            <div class="grid-row" data-month="9" data-period="afternoon" data-venue="Island Plaza">
+                <div class="col-img"><img src="image/island.png" alt="Harvest market"></div>
+                <div class="col-host">September</div>
+                <div class="col-date"><strong>Harvest Market</strong>Bring a handmade item or favorite snack to share with neighbors.</div>
+                <div class="col-time">Leif<br><span class="activity-time">1 PM–4 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="10" data-period="evening" data-venue="Community Center">
+                <div class="col-img"><img src="image/island.png" alt="Halloween costume party"></div>
+                <div class="col-host">October</div>
+                <div class="col-date"><strong>Halloween Costume Party</strong>Dress up, play island games, and collect treats.</div>
+                <div class="col-time">Jack<br><span class="activity-time">6 PM–8 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="11" data-period="afternoon" data-venue="Community Hall">
+                <div class="col-img"><img src="image/island.png" alt="Autumn craft fair"></div>
+                <div class="col-host">November</div>
+                <div class="col-date"><strong>Autumn Craft Fair</strong>Make seasonal decorations and browse your neighbors' crafts.</div>
+                <div class="col-time">Mabel<br><span class="activity-time">2 PM–4 PM</span></div>
+            </div>
+            <div class="grid-row" data-month="12" data-period="evening" data-venue="Community Center">
+                <div class="col-img"><img src="image/island.png" alt="Toy Day gift exchange"></div>
+                <div class="col-host">December</div>
+                <div class="col-date"><strong>Toy Day Gift Exchange</strong>Wrap a small gift and celebrate the end of the year together.</div>
+                <div class="col-time">Jingle<br><span class="activity-time">4 PM–7 PM</span></div>
+            </div>
+        </div>
+
+        <aside class="rsvp-card" aria-labelledby="rsvp-card-title" aria-live="polite">
+            <h3 id="rsvp-card-title" tabindex="-1">Confirmed signups</h3>
+            <p id="rsvp-card-empty">Choose an activity to preview a signup. Your confirmations will appear here.</p>
+            <div class="rsvp-entry rsvp-example" id="rsvp-example">
+                <p class="rsvp-example-label">Example signup</p>
+                <p><strong>New Year Island Gathering</strong></p>
+                <dl>
+                    <dt>Name</dt><dd>Fiona</dd>
+                    <dt>People</dt><dd>2</dd>
+                    <dt>Time</dt><dd>January, 5 PM–7 PM</dd>
+                    <dt>Location</dt><dd>Community Center</dd>
+                </dl>
+            </div>
+            <ul class="rsvp-list" id="rsvp-list"></ul>
+        </aside>
+        </div>
+    </section>
+
+<template id="rsvp-entry-template">
+    <li class="rsvp-entry" tabindex="-1">
+        <p><strong data-field="activity"></strong></p>
+        <dl>
+            <dt>Name</dt><dd data-field="name"></dd>
+            <dt>People</dt><dd data-field="people"></dd>
+            <dt>Time</dt><dd data-field="time"></dd>
+            <dt>Location</dt><dd data-field="location"></dd>
+        </dl>
+        <button class="rsvp-button rsvp-remove" type="button">Cancel signup</button>
+    </li>
+</template>
+
+<dialog id="activity-signup" class="rsvp-dialog" aria-labelledby="rsvp-dialog-title">
+    <h3 id="rsvp-dialog-title">Sign up for an activity</h3>
+    <p><strong id="rsvp-dialog-activity"></strong></p>
+    <p id="rsvp-dialog-schedule"></p>
+    <form id="activity-signup-form" name="activitySignup">
+        <div id="rsvp-fields">
+            <label for="rsvp-name">What’s your name?</label>
+            <input id="rsvp-name" name="guestName" type="text" autocomplete="name" maxlength="80" required autofocus>
+            <label for="rsvp-people">How many people are joining?</label>
+            <input id="rsvp-people" name="partySize" type="number" min="1" step="1" value="1" required>
+            <div class="rsvp-actions">
+                <button class="rsvp-button" type="button" id="rsvp-cancel">Cancel</button>
+                <button class="rsvp-button" type="submit">Review signup</button>
+            </div>
+        </div>
+        <div id="rsvp-review" hidden>
+            <p id="rsvp-review-question" tabindex="-1">Would you like to confirm your signup?</p>
+            <p id="rsvp-review-details"></p>
+            <div class="rsvp-actions">
+                <button class="rsvp-button" type="button" id="rsvp-back">Back</button>
+                <button class="rsvp-button" type="submit">Confirm signup</button>
+            </div>
+        </div>
+    </form>
+</dialog>
+
+<footer class="site-footer">
+    <div class="site-footer-content">
+        <a class="site-footer-brand" href="index.html">
+            <img src="image/amlogo.png" alt="" width="300" height="202">
+            <span>Community Center</span>
+        </a>
+
+        <nav aria-label="Footer navigation">
+            <h2>Quick Links</h2>
+            <ul class="site-footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="actd.html">Activities</a></li>
+                <li><a href="ani.html">Neighbors</a></li>
+                <li><a href="photo.html">Photos</a></li>
+                <li><a href="survey.html">Join Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="site-footer-contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Fionanmj@island.com</li>
+                <li>+86 189 **** ****</li>
+            </ul>
+        </div>
+    </div>
+    <div class="site-footer-bottom">&copy; Fiona</div>
+</footer>
+
+
+<script>
+    const monthFilter = document.getElementById('month-filter');
+    const monthSelect = document.getElementById('month-select');
+    const timeSelect = document.getElementById('time-select');
+    const filterStatus = document.getElementById('filter-status');
+    const activityRows = document.querySelectorAll('.grid-row[data-month]');
+    const activityList = document.getElementById('activity-list');
+    const signupDialog = document.getElementById('activity-signup');
+    const signupForm = document.forms.activitySignup;
+    const guestName = signupForm.elements.guestName;
+    const partySize = signupForm.elements.partySize;
+    const signupFields = document.getElementById('rsvp-fields');
+    const signupReview = document.getElementById('rsvp-review');
+    const signupList = document.getElementById('rsvp-list');
+    const signupEntryTemplate = document.getElementById('rsvp-entry-template');
+    const signupListTitle = document.getElementById('rsvp-card-title');
+    const signupEmptyMessage = document.getElementById('rsvp-card-empty');
+    const signupExample = document.getElementById('rsvp-example');
+    let selectedActivity;
+
+    for (const row of activityRows) {
+        const title = row.querySelector('.col-date strong');
+        const joinButton = document.createElement('button');
+        joinButton.type = 'button';
+        joinButton.className = 'rsvp-button activity-join';
+        joinButton.textContent = 'Sign up';
+        joinButton.setAttribute('aria-label', 'Sign up for ' + title.textContent);
+        title.parentElement.append(joinButton);
+    }
+
+    function showSignupReview(showReview) {
+        signupFields.hidden = showReview;
+        signupReview.hidden = !showReview;
+        if (showReview) {
+            document.getElementById('rsvp-review-question').focus();
+        } else {
+            guestName.focus();
+        }
+    }
+
+    activityList.addEventListener('click', function(event) {
+        const row = event.target.closest('.grid-row[data-month]');
+        if (!row) return;
+
+        selectedActivity = {
+            title: row.querySelector('.col-date strong').textContent.trim(),
+            time: row.querySelector('.col-host').textContent.trim() + ', ' +
+                row.querySelector('.activity-time').textContent.trim(),
+            location: row.dataset.venue
+        };
+        signupForm.reset();
+        guestName.setCustomValidity('');
+        document.getElementById('rsvp-dialog-activity').textContent = selectedActivity.title;
+        document.getElementById('rsvp-dialog-schedule').textContent =
+            selectedActivity.time + ' · ' + selectedActivity.location;
+        signupFields.hidden = false;
+        signupReview.hidden = true;
+        signupDialog.showModal();
+    });
+
+    guestName.addEventListener('input', function() {
+        guestName.setCustomValidity('');
+    });
+    document.getElementById('rsvp-cancel').addEventListener('click', function() {
+        signupDialog.close();
+    });
+    document.getElementById('rsvp-back').addEventListener('click', function() {
+        showSignupReview(false);
+    });
+
+    function updateSignupExample() {
+        const hasSignups = signupList.childElementCount > 0;
+        signupEmptyMessage.hidden = hasSignups;
+        signupExample.hidden = hasSignups;
+    }
+
+    signupList.addEventListener('click', function(event) {
+        const cancelButton = event.target.closest('.rsvp-remove');
+        if (!cancelButton) return;
+
+        const entry = cancelButton.closest('.rsvp-entry');
+        const nextEntry = entry.nextElementSibling || entry.previousElementSibling;
+        entry.remove();
+        updateSignupExample();
+
+        const focusTarget = nextEntry ? nextEntry.querySelector('.rsvp-remove') : signupListTitle;
+        focusTarget.focus();
+    });
+
+    signupForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = guestName.value.trim();
+        if (!name) {
+            guestName.setCustomValidity('Please enter your name.');
+            guestName.reportValidity();
+            return;
+        }
+
+        const people = partySize.valueAsNumber;
+        if (signupReview.hidden) {
+            const partyLabel = people === 1 ? 'person' : 'people';
+            document.getElementById('rsvp-review-details').textContent = name + ' · ' + people + ' ' + partyLabel;
+            showSignupReview(true);
+            return;
+        }
+
+        const existingEntry = Array.from(signupList.children).find(function(entry) {
+            return entry.dataset.activity === selectedActivity.title;
+        });
+        const entry = existingEntry || signupEntryTemplate.content.firstElementChild.cloneNode(true);
+        entry.dataset.activity = selectedActivity.title;
+        entry.querySelector('[data-field="activity"]').textContent = selectedActivity.title;
+        entry.querySelector('[data-field="name"]').textContent = name;
+        entry.querySelector('[data-field="people"]').textContent = people;
+        entry.querySelector('[data-field="time"]').textContent = selectedActivity.time;
+        entry.querySelector('[data-field="location"]').textContent = selectedActivity.location;
+        if (!existingEntry) {
+            entry.querySelector('.rsvp-remove').setAttribute(
+                'aria-label', 'Cancel signup for ' + selectedActivity.title
+            );
+            signupList.append(entry);
+        }
+        updateSignupExample();
+        signupDialog.close();
+        entry.focus();
+    });
+
+    // The function checks every row and returns the number of matches.
+    function filterActivities(rows, selectedMonth = 'all', selectedPeriod = 'all') {
+        let visibleCount = 0;
+
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            const matchesMonth = selectedMonth === 'all' || row.dataset.month === selectedMonth;
+            const matchesPeriod = selectedPeriod === 'all' || row.dataset.period === selectedPeriod;
+            const isMatch = matchesMonth && matchesPeriod;
+
+            row.hidden = !isMatch;
+
+            if (isMatch) {
+                visibleCount++;
+            }
+        }
+
+        return visibleCount;
+    }
+
+    monthFilter.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const selectedMonth = monthSelect.value;
+        const selectedPeriod = timeSelect.value;
+        let visibleCount;
+
+        if (selectedPeriod === 'all') {
+            visibleCount = filterActivities(activityRows, selectedMonth);
+        } else {
+            visibleCount = filterActivities(activityRows, selectedMonth, selectedPeriod);
+        }
+
+        const monthName = selectedMonth === 'all'
+            ? 'all months'
+            : monthSelect.options[monthSelect.selectedIndex].text;
+        const periodName = selectedPeriod === 'all'
+            ? 'any time'
+            : timeSelect.options[timeSelect.selectedIndex].text.toLowerCase();
+        const availabilityText = selectedPeriod === 'all'
+            ? 'at any time'
+            : `in the ${periodName}`;
+
+        if (visibleCount === 0) {
+            filterStatus.textContent = `No activities found for ${monthName} ${availabilityText}. Try another choice.`;
+        } else {
+            const activityWord = visibleCount === 1 ? 'activity' : 'activities';
+            filterStatus.textContent = `Found ${visibleCount} ${activityWord} for ${monthName} ${availabilityText}.`;
+        }
+    });
+
+    const burgerBtn = document.getElementById('burger-btn');
+    const navList = document.getElementById('nav-list');
+    
+    if (burgerBtn) {
+        burgerBtn.onclick = function() {
+            navList.classList.toggle('active');
+            const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+            burgerBtn.setAttribute('aria-expanded', !isExpanded);
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        navLinks.forEach(link => {
+            const linkPage = new URL(link.href).pathname.split('/').pop();
+            if (linkPage === currentPage) {
+                link.style.color = '#C5D36D'; 
+                if (!link.classList.contains('special-link')) {
+                    link.style.borderBottom = '2px solid #C5D36D';
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

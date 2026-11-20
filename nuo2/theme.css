@@ -1,0 +1,284 @@
+:root {
+    color-scheme: light;
+}
+
+body {
+    background-color: #fbf8ed;
+    color: #402f26;
+}
+
+:is(.villagers-section h2, .moments-section h2, .activities-section h2, .form-container h2, .tip) {
+    color: #385b79;
+}
+
+.nav-container .top-bar {
+    gap: 12px;
+    padding-inline: clamp(12px, 2.5vw, 40px);
+}
+
+.theme-toggle {
+    padding: 8px 12px;
+    border: 1px solid #f0f5e5;
+    border-radius: 18px;
+    background: #fffae6;
+    color: #30404c;
+    font: inherit;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid #ffe981;
+    outline-offset: 3px;
+}
+
+@media (max-width: 1050px) {
+    .nav-container .nav-left {
+        gap: 8px;
+        font-size: 16px;
+    }
+
+    .nav-container .logo {
+        width: clamp(42px, 8vw, 68px);
+    }
+}
+
+@media (max-width: 380px) {
+    .nav-container .top-bar {
+        gap: 8px;
+    }
+
+    .nav-container .nav-left {
+        font-size: 14px;
+    }
+
+    .theme-toggle {
+        padding-inline: 8px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1050px) {
+    .nav-container .nav-links a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+}
+
+:root.night-mode {
+    color-scheme: dark;
+    --night-background: #141d29;
+    --night-surface: #223041;
+    --night-panel: #293949;
+    --night-text: #f2eee2;
+    --night-muted: #d8dfea;
+    --night-heading: #b9d8f1;
+    --night-border: #627c83;
+}
+
+.night-mode body {
+    background: var(--night-background);
+    color: var(--night-text);
+}
+
+.night-mode :is(.nav-container, .nav-links, .footer, .footer .grid) {
+    background-color: #1c303d;
+}
+
+.night-mode .theme-toggle {
+    background: #314755;
+    color: var(--night-text);
+    border-color: var(--night-border);
+}
+
+.night-mode .first {
+    background-image: linear-gradient(rgba(14, 26, 46, 0.62), rgba(14, 26, 46, 0.62)), url('image/bc.png');
+}
+
+.night-mode .first h1 {
+    color: #fff4cd;
+    text-shadow: 2px 3px 0 #142332;
+}
+
+.night-mode :is(.first .subtitle, .content-header .subtitle, .features .item) {
+    background: #263749;
+    color: var(--night-text);
+}
+
+.night-mode :is(.birthday-picker, .villager-search, .villager-favorites, .villager-results #villager-search-status:not(:empty),
+    .animal-card, .showcard-content, .month-filter, .grid-header, .grid-row, .form-container, .profile-preview, .container:has(.features)) {
+    background: var(--night-surface);
+    color: var(--night-text);
+    border-color: var(--night-border);
+}
+
+.night-mode :is(.profile-preview-item, .info-row, .col-time) {
+    background: var(--night-panel);
+    color: var(--night-text);
+}
+
+.night-mode :is(.villagers-section h2, .moments-section h2, .activities-section h2, .form-container h2,
+    .content-header h2, .text h4, .profile-preview h3, .showcard-name, .col-host, .col-date strong, .tip) {
+    color: var(--night-heading);
+}
+
+.night-mode .activities-section h2 {
+    background: var(--night-panel);
+}
+
+.night-mode :is(.animal-card figcaption, .villager-search-hint, .villager-favorites p, .filter-status,
+    .filter-field, .col-date, .form-group label, .form-group .form-label, .choice-group, .profile-preview-item span,
+    .profile-preview-item strong, .profile-preview-note, .moments-subtitle, .text p, .close-btn) {
+    color: var(--night-muted);
+}
+
+.night-mode :is(.birthday-picker select, .villager-search input, .filter-field select, .form-group select,
+    .form-group textarea, input[type="text"], input[type="email"], input[type="password"], input[type="tel"],
+    input[type="date"], input[type="time"], input[type="number"]) {
+    background: #192535;
+    color: var(--night-text);
+    border-color: var(--night-border);
+}
+
+.night-mode .villager-heart[aria-pressed="false"] {
+    background: var(--night-panel);
+    color: var(--night-text);
+    border-color: var(--night-border);
+}
+
+/* Shared footer */
+.site-footer {
+    --footer-background: #233b2e;
+    --footer-text: #fff8e7;
+    --footer-muted: #d4dfcf;
+    --footer-accent: #d9e58e;
+    --footer-rule: #59715b;
+
+    padding: clamp(26px, 5vw, 48px) clamp(20px, 6vw, 64px) 0;
+    border-top: 3px solid var(--footer-accent);
+    background: var(--footer-background);
+    color: var(--footer-text);
+}
+
+.night-mode .site-footer {
+    --footer-background: #1c303d;
+    --footer-muted: #d7e1e8;
+    --footer-rule: #4b6675;
+}
+
+.site-footer-content,
+.site-footer-bottom {
+    max-width: 1080px;
+    margin-inline: auto;
+}
+
+.site-footer-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(22px, 5vw, 60px);
+    padding-bottom: clamp(24px, 4vw, 36px);
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--footer-accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.site-footer a:focus-visible {
+    outline: 2px solid var(--footer-accent);
+    outline-offset: 4px;
+}
+
+.site-footer-brand {
+    justify-self: start;
+    display: grid;
+    justify-items: start;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.site-footer-brand img {
+    display: block;
+    width: min(112px, 100%);
+    height: auto;
+}
+
+.site-footer h2 {
+    margin: 0 0 12px;
+    color: var(--footer-accent);
+    font-size: 16px;
+}
+
+.site-footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--footer-muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.site-footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    gap: 8px 22px;
+}
+
+.site-footer-contact li + li {
+    margin-top: 8px;
+}
+
+.site-footer-contact li {
+    overflow-wrap: anywhere;
+}
+
+.site-footer-bottom {
+    padding-block: 14px 18px;
+    border-top: 1px solid var(--footer-rule);
+    color: var(--footer-muted);
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 680px) {
+    .site-footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 16px;
+    }
+
+    .site-footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 420px) {
+    .site-footer-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.mobile-top-bar {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile-top-bar .bar {
+    display: block;
+}
+
+.mobile-top-bar:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
